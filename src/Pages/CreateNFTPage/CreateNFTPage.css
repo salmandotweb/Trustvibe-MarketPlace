@@ -1,0 +1,221 @@
+.create_nft_page {
+  padding: 2rem 4rem;
+}
+.create_nft_header > p {
+  color: var(--fade-text);
+}
+.create_nft_form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem 0;
+}
+.form_right_container {
+  flex: 0.8;
+  margin-left: 3rem;
+  overflow-x: hidden;
+}
+.create_nft_details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-bottom: 0.05rem solid #666666;
+  padding-bottom: 1rem;
+}
+.nft_details_basics {
+  width: 100%;
+}
+.nft_basics_attributes_title {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to top, var(--primary-1), var(--primary-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nft_details_title,
+.nft_details_description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 1.5rem 0;
+}
+.nft_details_title label,
+.nft_details_description label {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.nft_details_title input,
+.nft_details_description textarea {
+  width: 100%;
+  border: 0.1rem solid #333;
+  background: var(--bg-color-1);
+  border-radius: 0.4rem;
+  padding: 1rem 0.7rem;
+  overflow-x: hidden;
+  color: var(--white);
+}
+.nft_details_title input:focus,
+.nft_details_description textarea:focus {
+  border: 0.1rem solid var(--primary-1);
+}
+.nft_description_label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nft_description_label > p {
+  color: var(--fade-text);
+  font-size: 1.4rem;
+}
+.keywords_container > h3 {
+  margin-bottom: 1rem;
+}
+.create_nft_attributes {
+  padding: 2rem 0;
+}
+
+.nft_checkboxes {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.5rem 0;
+}
+.nft_checkboxes .option {
+  background: var(--bg-color-1);
+  border: 0.1rem solid var(--bg-color-2);
+  height: 100%;
+  max-width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
+}
+.nft_checkboxes .option:not(:last-child) {
+  margin-right: 2rem;
+}
+.nft_checkboxes .option .dot {
+  height: 2rem;
+  width: 2rem;
+  background: none;
+  border: 0.1rem solid var(--bg-color-2);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.nft_checkboxes .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 15%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--primary-1);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"] {
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+  border-color: var(--primary-1);
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot {
+  background: none;
+  border: 0.1rem solid var(--bg-color-2);
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  background: var(--primary-1);
+  transform: scale(1);
+}
+.wrapper .option span {
+  font-size: 2rem;
+  color: var(--white);
+}
+.option span {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span {
+  color: var(--white);
+}
+.mint_ethereum_btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.mint_ethereum_btn > button {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-1),
+    var(--primary-2)
+  );
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transform: 250ms all;
+}
+.mint_ethereum_btn > button:active {
+  transform: scale(0.98);
+}
+.mint_ethereum_btn > button:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-2),
+    var(--primary-1)
+  );
+}
+
+@media screen and (max-width: 1200px) {
+  .form_right_container {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 1052px) {
+  .create_nft_form {
+    flex-direction: column;
+  }
+  .form_right_container {
+    margin-left: 0;
+  }
+  .upload_nft_container {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 556px) {
+  .create_nft_page {
+    padding: 2rem;
+  }
+  .mint_ethereum_btn {
+    justify-content: flex-start;
+  }
+  .form_right_container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 595px) {
+  .upload_nft_container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .create_nft_page {
+    padding: 2rem 1rem;
+  }
+}

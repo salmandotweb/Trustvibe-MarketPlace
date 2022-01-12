@@ -1,0 +1,136 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 4rem;
+  position: relative;
+}
+.header_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+.header_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to top right,
+    rgb(0, 0, 0, 0.7),
+    rgb(0, 0, 0, 0)
+  );
+}
+.header_img > img {
+  width: 100%;
+}
+.header_content {
+  position: absolute;
+  bottom: 3rem;
+  left: 6rem;
+}
+.header_content > h1 {
+  font-size: 4rem;
+}
+.header_content > p {
+  font-size: 1.7rem;
+  background: linear-gradient(to right, var(--primary-1), var(--primary-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+@media screen and (max-width: 930px) {
+  .header_img {
+    border-radius: 1rem;
+  }
+}
+@media screen and (max-width: 812px) {
+  .header_content > h1 {
+    font-size: 3rem;
+  }
+  .header_content > p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 660px) {
+  .header {
+    padding: 1rem 3rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .header {
+    height: 55vh;
+  }
+  .header_img {
+    height: 100%;
+  }
+  .header_img > img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 586px) {
+  .header_img {
+    border-radius: 0.5rem;
+  }
+  .header_content {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .header_content > h1 {
+    font-size: 3.5rem;
+  }
+  .header_img::before {
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0, 0.7),
+      rgb(0, 0, 0, 0.5)
+    );
+  }
+}
+@media screen and (max-width: 485px) {
+  .header_content {
+    top: 50%;
+  }
+  .header_content > h1 {
+    font-size: 3rem;
+  }
+  .header {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 478px) {
+  .header {
+    padding: 2rem;
+  }
+  .header_img {
+    height: 100%;
+  }
+  .header_img > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .header_content {
+    top: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header_content {
+    top: 55%;
+  }
+  .header_content > h1 {
+    font-size: 4rem;
+  }
+  .header_content > p {
+    font-size: 1.7rem;
+  }
+}

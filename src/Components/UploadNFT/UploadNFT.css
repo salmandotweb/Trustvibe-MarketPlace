@@ -1,0 +1,120 @@
+.upload_nft {
+  max-width: 50rem;
+  width: 50rem;
+  height: 50rem;
+  padding: 2rem;
+  border: 0.1rem solid #333;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--bg-color-1);
+  box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
+  position: relative;
+  z-index: 1;
+}
+.upload_nft_icon {
+  padding: 5rem 0 2rem 0;
+}
+.upload_nft p {
+  color: var(--fade-text);
+}
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+[type="file"] + label {
+  background: none;
+  border-radius: 5px;
+  color: var(--primary-1);
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 0.8rem 3rem;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+  border: 0.1rem solid var(--primary-1);
+  transition: 250ms all;
+}
+[type="file"] + label:hover {
+  border: 0.1rem solid var(--primary-2);
+  color: var(--primary-1);
+}
+[type="file"] + label.upload_btn {
+  background-color: none;
+  transition: none;
+}
+.upload_nft_description {
+  padding-bottom: 4rem;
+}
+.upload_nft_footer {
+  padding: 3rem 0 1rem 0;
+}
+.upload_nft_footer > p:not(:last-child) {
+  padding-bottom: 0.5rem;
+}
+.nft_images_videos_container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.nft_video,
+.nft_image {
+  height: 98%;
+  width: 98%;
+  object-fit: cover;
+}
+.upload_change_btn {
+  position: absolute !important;
+  left: 34% !important;
+  bottom: 0 !important;
+  background: var(--black) !important;
+}
+
+@media screen and (max-width: 556px) {
+  .upload_nft {
+    width: 40rem;
+    height: 30rem;
+  }
+  .upload_nft_icon {
+    padding: 2rem;
+  }
+  .upload_nft_icon > img {
+    max-width: 7rem;
+  }
+  .upload_nft_description {
+    padding-bottom: 2rem;
+  }
+  .upload_nft_footer {
+    padding: 2rem 0 1rem 0;
+  }
+}
+@media screen and (max-width: 473px) {
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 442px) {
+  .upload_nft {
+    width: 100%;
+  }
+  .upload_nft p {
+    font-size: 1.4rem;
+  }
+}
