@@ -4,6 +4,7 @@ import "./UploadNFT.css";
 
 function UploadNFT() {
   const [files, setFiles] = useState([]);
+  console.log(files);
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/*,video/*,audio/*",
     maxSize: 50000000,
@@ -44,7 +45,9 @@ function UploadNFT() {
 
   const videos = files.map((file) => (
     <>
-      {file.type === "video/mp4" ? (
+      {file.type === "video/mp4" ||
+      file.type === "audio/wav" ||
+      file.type === "audio/mp3" ? (
         <div key={file.name}>
           <div className="nft_images_videos_container">
             <video src={file.preview} className="nft_video" autoPlay controls />

@@ -7,6 +7,10 @@
 }
 .starting_date {
   margin-right: 2rem;
+  width: 50%;
+}
+.ending_date {
+  width: 50%;
 }
 .auction_dates_container label {
   font-weight: 600;
