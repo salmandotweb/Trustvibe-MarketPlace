@@ -1,0 +1,211 @@
+.modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(0.3rem);
+  z-index: 99999;
+}
+.bid_modal {
+  background: var(--bg-color-2);
+  border-radius: 0.7rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* height: auto; */
+  width: 50rem;
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 999999;
+}
+.bid_modal_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bid_modal_header > h2 {
+  font-size: 2.2rem;
+}
+.close_modal_btn {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 50%;
+  background: none;
+}
+.close_btn_icon {
+  color: var(--white);
+  font-size: 2rem;
+}
+.bid_modal_content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.bid_modal_content_header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.selected_user_details {
+  background: var(--modal-bg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0.9;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+}
+.bid_modal_content_header > img {
+  max-width: 100%;
+}
+.selected_user {
+  padding: 0.5rem 1rem;
+}
+.selected_user > span {
+  font-size: 1.5rem;
+  color: #cccccc;
+}
+.selected_user > p {
+  font-weight: 600;
+  background: linear-gradient(to right, var(--primary-1), var(--primary-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.7rem;
+}
+.selected_quantity {
+  background: var(--bg-color-1);
+  border-radius: 0.5rem;
+  flex: 0.1;
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.selected_quantity > p {
+  color: #666666;
+  margin-right: 1rem;
+}
+.purchase_details {
+  background: var(--modal-bg);
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.purchase_detail {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.purchase_detail:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.purchase_detail > span {
+  color: #cccccc;
+  flex: 0.7;
+}
+.purchase_detail > p {
+  flex: 0.3;
+  font-weight: 500;
+  letter-spacing: 0.01;
+}
+.purchase_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+.purchase_amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.purchase_amount > h1 {
+  background: linear-gradient(to right, var(--primary-1), var(--primary-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 3.4rem;
+}
+.purchase_amount > p {
+  font-weight: 500;
+}
+.buy_nft_btn {
+  border-radius: 5rem;
+  flex: 0.4;
+  font-weight: 700;
+}
+.bid_modal_footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+.bid_modal_footer > p {
+  background: linear-gradient(to right, var(--primary-1), var(--primary-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin: 0 0.3rem;
+}
+@media screen and (max-width: 526px) {
+  .bid_modal {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 492px) {
+  .buy_nft_btn {
+    flex: 0.6;
+  }
+}
+@media screen and (max-width: 416px) {
+  .buy_nft_btn {
+    flex: 0.8;
+  }
+}
+@media screen and (max-width: 400px) {
+  .selected_user_details {
+    margin-right: 1rem;
+  }
+  .selected_user {
+    width: 100%;
+  }
+  .selected_user > span {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .bid_modal {
+    width: 97%;
+    padding: 2rem 1rem;
+  }
+}
+@media screen and (max-width: 346px) {
+  .buy_nft_btn {
+    flex: 0.9;
+  }
+  .purchase_amount > h1 {
+    font-size: 2.7rem;
+  }
+  .selected_quantity {
+    padding: 1.6rem 1rem;
+  }
+  .selected_user > span {
+    font-size: 1.2rem;
+  }
+}

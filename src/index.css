@@ -14,8 +14,9 @@
   --bg-color: #222222;
   --bg-color-1: #191919;
   --bg-color-2: #333;
-  --primary-1: #ffab49;
-  --primary-2: #ff7b6d;
+  --modal-bg: #282828;
+  --primary-1: #ffa439;
+  --primary-2: #ff5e4a;
   --fade-text: #bbbbbb;
   --white: #fff;
   --black: #000;
@@ -25,6 +26,22 @@ a {
 }
 p {
   margin-bottom: 0 !important;
+}
+.btn {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-1),
+    var(--primary-2)
+  );
+  color: var(--black);
+}
+.btn:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-2),
+    var(--primary-1)
+  );
+  color: var(--black) !important;
 }
 body {
   font-size: 1.6rem !important;

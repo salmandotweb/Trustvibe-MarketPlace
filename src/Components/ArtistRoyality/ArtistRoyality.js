@@ -20,7 +20,7 @@ function ArtistRoyality() {
         </div>
       </div>
       <p className="current_eth_price">
-        Max. combined royalty percentage allowed is 50%.
+        Max. royalty percentage allowed is 20%.
       </p>
     </div>
   );

@@ -12,7 +12,7 @@ function Navbar({ connectMetamask }) {
   return (
     <nav class="navbar">
       <a href="/marketplace" class="nav_logo" onClick={closeMobileMenu}>
-        <img src="images/navLogo.png" alt="" />
+        <img src="images/nav_logo.svg" alt="" />
       </a>
       <form className="nav_searchbar">
         <FaSearch className="search_icon" />
@@ -23,7 +23,7 @@ function Navbar({ connectMetamask }) {
           <a href="/">Explore</a>
         </li>
         <li onClick={closeMobileMenu}>
-          <a href="/">My profile</a>
+          <a href="/shop">My profile</a>
         </li>
         <li onClick={closeMobileMenu}>
           <a href="/create">Create</a>

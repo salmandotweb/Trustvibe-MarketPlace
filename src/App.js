@@ -11,6 +11,7 @@ import Web3 from "web3";
 import UsernameModal from "./Components/UsernameModal/usernameModal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CreateNFTPage from "./Pages/CreateNFTPage/CreateNFTPage";
+import ShopPage from "./Pages/ShopPage/ShopPage";
 
 function App() {
   // const [show, setShow] = useState(false);
@@ -69,6 +70,7 @@ function App() {
         <Route path="/marketplace" element={<MarketPlacePage />} />
         <Route path="/nft" element={<SingleNFTPage />} />
         <Route path="/create" element={<CreateNFTPage />} />
+        <Route path="/shop" element={<ShopPage />} />
       </Routes>
       {/* <UsernameModal show={show} setShow={setShow} /> */}
     </div>

@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./BuyBtn.css";
 
-function BuyBtn({ name, cls_name }) {
+function BuyBtn({ name, cls_name, onClick }) {
   return (
-    <a href="/nft" className={`buy_btn ${cls_name}`}>
+    <Link
+      to="/nft"
+      className={`buy_btn ${cls_name}`}
+      onClick={onClick ? onClick : ""}
+    >
       {name}
-    </a>
+    </Link>
   );
 }
 

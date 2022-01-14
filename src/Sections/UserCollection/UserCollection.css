@@ -1,0 +1,174 @@
+.user_collection_container {
+  padding: 2rem 0 1rem 0;
+}
+.price_filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 0;
+}
+.filter_inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color-1);
+  border: 0.15rem solid var(--bg-color-2);
+  padding: 1.3rem;
+  border-radius: 0.6rem;
+}
+.search_input {
+  flex: 0.5;
+}
+.price_range_input {
+  flex: 0.2;
+}
+.price_low_input {
+  flex: 0.2;
+}
+.price_dropdown > .Dropdown-control {
+  padding: 1.2rem !important;
+  border: 0.15rem solid var(--bg-color-2);
+}
+.price_range_input input::placeholder {
+  color: #cccccc !important;
+}
+.search_icon {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #666666;
+  margin-right: 0.6rem;
+}
+.price_filters input {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  width: 100%;
+  color: var(--white);
+}
+.price_filters input::placeholder {
+  color: #666666;
+}
+.color_icon {
+  color: var(--primary-1);
+}
+.top_collection_tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 3rem 0;
+}
+.collection_btn {
+  background: var(--bg-color-2);
+  color: var(--white);
+  padding: 0.7rem 1.4rem;
+  border-radius: 5rem;
+  border: none;
+  cursor: pointer;
+}
+.collection_btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
+.collection_btn:not(:last-child) {
+  margin-right: 2rem;
+}
+.collection_btn.active {
+  background: var(--white);
+  color: var(--black);
+  font-weight: 500;
+}
+.collection_btn span {
+  background: var(--bg-color-1);
+  color: var(--white);
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.3rem;
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+}
+.active {
+  background-color: var(--white) !important;
+}
+@media screen and (max-width: 920px) {
+  .search_input {
+    flex: 0.4;
+  }
+  .price_range_input {
+    flex: 0.25;
+  }
+  .price_low_input {
+    flex: 0.3;
+  }
+}
+@media screen and (max-width: 826px) {
+  .top_collection_tabs {
+    overflow-x: scroll;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .collection_btn {
+    min-width: 15rem;
+  }
+}
+@media screen and (max-width: 744px) {
+  .user_collection_container {
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 656px) {
+  .top_collection_tabs {
+    padding: 1rem 0rem 3rem 0rem;
+  }
+}
+@media screen and (max-width: 616px) {
+  .price_range_input {
+    display: none;
+  }
+  .search_input {
+    flex: 0.6;
+    margin-right: 1.5rem;
+  }
+  .price_low_input {
+    flex: 0.4;
+  }
+}
+@media screen and (max-width: 532px) {
+  .collection_btn {
+    font-size: 1.3rem;
+    min-width: 13rem;
+  }
+  .collection_btn > span {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 448px) {
+  .price_filters {
+    padding: 1rem 0 2rem 0;
+  }
+  .price_low_input {
+    flex: 0.5;
+  }
+  .search_input {
+    flex: 0.5;
+  }
+  .collection_btn:hover {
+    background: var(--bg-color-2);
+    color: var(--white);
+  }
+}
+@media screen and (max-width: 384px) {
+  .price_dropdown > .Dropdown-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem 0.5rem;
+  }
+  .price_dropdown > .Dropdown-control > .Dropdown-placeholder {
+    font-size: 1.3rem;
+  }
+  .search_input {
+    padding: 1rem;
+  }
+}

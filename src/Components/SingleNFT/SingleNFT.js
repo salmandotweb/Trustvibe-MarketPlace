@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import BiddingPerson from "../BiddingPerson/BiddingPerson";
 import BuyBtn from "../BuyBtn/BuyBtn";
+import PlaceBidModal from "../PlaceBidModal/PlaceBidModal";
 import PriceBtn from "../PriceBtn/PriceBtn";
 import "./SingleNFT.css";
 
 function SingleNFT() {
+  const [OpenModal, setOpenModal] = useState(false);
   return (
     <div className="singleNFT">
       <div className="singleNFT_header">
@@ -48,7 +50,11 @@ function SingleNFT() {
               <p className="+fav_counter">120</p>
             </div>
             <PriceBtn date="Highest Bid" time="1.24 BNB" cls_name="nft_btn_1" />
-            <BuyBtn name="Place Bid" cls_name="nft_btn_2" />
+            <BuyBtn
+              name="Place Bid"
+              cls_name="nft_btn_2"
+              onClick={() => setOpenModal(true)}
+            />
           </div>
           <div className="nft_owner">
             <h4 className="owner_title">Owner</h4>
@@ -84,6 +90,7 @@ function SingleNFT() {
           </div>
         </div>
       </div>
+      {OpenModal && <PlaceBidModal closeModal={setOpenModal} />}
     </div>
   );
 }

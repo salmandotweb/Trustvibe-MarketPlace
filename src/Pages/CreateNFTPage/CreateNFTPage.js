@@ -80,7 +80,24 @@ function CreateNFTPage() {
             {status === 1 && <ListPrice />}
             {status === 1 && <AuctionDate />}
             {status === 1 && <ArtistRoyality />}
-            {status === 2 && <ListPrice />}
+            {status === 2 && (
+              <ListPrice
+                quantity_container={
+                  <div className="quantity_container">
+                    <label for="list_price_quantity">Quantity</label>
+                    <div className="list_price_quantity">
+                      <input
+                        type="text"
+                        id="list_price_quantity"
+                        placeholder="No. of copies"
+                        required
+                      />
+                    </div>
+                    <p className="current_eth_price">Enter 1 for unique</p>
+                  </div>
+                }
+              />
+            )}
             {status === 2 && <ArtistRoyality />}
           </div>
           <div className="mint_ethereum_btn">
